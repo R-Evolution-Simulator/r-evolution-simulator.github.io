@@ -1,0 +1,137 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>(R)Evolution Simulator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="../css/main.css" rel="stylesheet">
+  </head>
+  <!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">(R)Evolution Simulator</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index_it.html">Home</a></li>
+                <li class="dropdown active">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Come funziona<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li class="active"><a href="#">Il progetto</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="creature.html">Le creature</a></li>
+                    <li><a href="chunk.html">I chunk</a></li>
+                  </ul>
+                </li>
+                <li><a href="risultati.html">Risultati</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+        <div>
+          <div class="jumbotron">
+            <h1 class="text-center">(R)Evolution Simulator</h1>
+            <img class="center-block img-responsive" src="../img/logo.png" alt="Descrizione immagine" />
+            <p class="text-center">(R)Evolution Simulator &egrave; un programma scritto in linguaggio Python e permette di simulare l'evoluzione di una specie, la selezione naturale all'interno di questa e molti altri comuni processi naturali.</p>
+            
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+              <h3>Che cos'è?</h3>
+              <p>
+                In tutti i campi della ricerca é in crescita esponenziale l’utilizzo di processori, mezzi di calcolo
+                potenti che permettono di simulare ambienti naturali, in cui é possibile osservare piú facilmente
+                fenomeni particolari al variare di parametri. Mediante i computer é possibile simulare voli spaziali,
+                moti astronomici, ecosistemi, anche sotto forma di videogioco.
+              </p>
+              <p>
+                Il nostro progetto ha previsto la creazione di un programma (scritto in linguaggio Python) che simula
+                all’interno di un ambiente virtuale i processi di evoluzione di una specie. Ogni creatura si comporta
+                come nel mondo reale, ricercando l’ambiente piú favorevole per vivere, nutrendosi, riproducendosi e
+                morendo se si trova in un ambiente troppo sfavorevole. Analizzando i dati si osserverá quindi come essi
+                rispecchiano ció che accade realmente in natura, come avviene la selezione naturale e come in un certo
+                ambiente sopravvivono gli animali piú adatti a vivere lí.
+              </p>
+              <p>
+                Attraverso questo progetto sará possibile osservare i meccanismi studiati dalla genetica delle
+                popolazioni, la trasmissione dei caratteri genetici su larga scala e la selezione naturale degli
+                individui della specie. Verranno analizzati vari caratteri (alcuni numerici e alcuni di tipo mendeliano)
+                e il loro comportamento a confronto con l’equilibrio di Hardy-Weinberg e con la deriva genetica.
+                Le creature da noi considerate possono ben rappresentare una qualunque specie di erbivori, i quali, pur
+                avendo un comportamente piuttosto semplice, daranno la possibilitá di analizzare l’andamento sinusoidale
+                della popolazione e la distribuzione differenziata sul territorio. L’interfaccia grafica, realizzata in
+                Python, permette di visualizzare il tutto in modo diretto ed efficace.</p></div>
+            <div class="col-md-7">
+            <h3>L'interfaccia grafica</h3>
+              <p>Nell’interfaccia grafica, i chunk sono rappresenta  come quadratini, mentre le creature come cerchi. La dimensione dei cerchi puó rappresentare aspetti diversi della creatura, impostabili nel programma. Le creature di dimensioni maggiori hanno un’energia maggiore in quell’istante perché hanno trovato una maggiore quantitá di cibo nei tick precedenti. Anche il colore delle creature puó rappresentare aspetti diversi</p>
+              <ul>
+                <li>l’abbinamento azzurro/giallo rappresenta la distinzione dei due sessi;
+                </li>
+                <li>
+                  l’abbinamento rosso/grigio-bianco/blu rappresenta il fenotipo delle creature in relazione alla loro capacitá di resistere alla temperatura. In particolare, il rosso un fenotipo c (preferenza per il caldo), il blu un fenotipo l (preferenza per il freddo), il grigio un fenotipo N eterozigota e bianco un fenotipo N omozigota (preferenza per climi temperati).
+                </li>
+              </ul>
+              <div class="row">
+                <div class="col-md-5">
+                  <a class="thumbnail">
+                    <img src="../img/creature_sex%20copy.png" alt="Descrizione immagine" />
+                  </a>
+                </div>
+                <div class="col-md-5">
+                  <a class="thumbnail">
+                    <img src="../img/creature_temp_resist%20copy.png" alt="Descrizione immagine" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+      <!-- Bootstrap core JavaScript
+================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+      <script src="../../dist/js/bootstrap.min.js"></script>
+      <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+      <script src="../../assets/js/vendor/holder.min.js"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      </body>
+    </html>
+
+

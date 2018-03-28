@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>(R)Evolution Simulator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="../css/main.css" rel="stylesheet">
+  </head>
+  <!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">(R)Evolution Simulator</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index_it.html">Home</a></li>
+                <li class="dropdown active">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Come funziona<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="progetto.html">Il progetto</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li  class="active"><a href="creature.html">Le creature</a></li>
+                    <li><a href="chunk.html">I chunk</a></li>
+                  </ul>
+                </li>
+                <li><a href="risultati.html">Risultati</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+        <div>
+          <h1>Le Creature</h1>
+          <h3>Il comportamento</h3>
+          <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+          <a class="thumbnail">
+            <img class="img-responsive" src="../img/comportamento.png" alt="Descrizione immagine" />
+          </a>
+          </div>
+            <div class="col-md-3">
+            </div>
+          </div>
+          
+        <p>
+          Le creature, ad ogni tick, cercano in una zona quadrata di 7 × 7 chunk attorno a loro, dove conviene andare
+          per mangiare (in base alla quantitá di cibo di ogni chunk considerato e alla distanza di esso dal punto in cui
+          si trovano). Una volta raggiunta la destinazione le creature mangiano, aumentando la loro energia vitale e
+          diminuendo la quantitá di cibo presente nel chunk. Ad ogni tick le creature perdono una quantitá di energia
+          proporzionale a quella che possiedono.
+          </p>
+          <h3>La riproduzione</h3>
+          <p>
+            La riproduzione avviene in modo casuale tra individui nella zona quadrata 7 × 7 chunk di sesso opposto. In particolare se due individui hanno abbastanza energia, si riproducono generando una nuova creatura che avrá caratteristiche ereditate dai genitori e mediate da mutazioni. Durante la riproduzione, i genitori perdono una certa quantitá di energia che cedono al figlio. 
+          </p>
+          <h3>Le cause di morte</h3>
+          <p>La morte delle creature puó essere causata da tre fattori:
+          </p>
+          <ul>
+            <li><strong>Vecchiaia (old age)</strong>: la vita massima viene calcolata alla nascita in base a un numero casuale
+              con andamento gaussiano di media 1000 tick e deviazione standard 200 tick;</li>
+            <li>
+              <strong>Temperatura (temperature)</strong>: ogni creatura ha un proprio genotipo riguardante la sua
+              capacitá di resistere alla temperatura (assimilabile alla presenza di pelo). In particolare esistono tre
+              diversi alleli: un allele dominante (N), senza particolari caratteristiche; due alleli recessivi (l
+              e c), rispettivamente adatti a vivere in clima freddo e caldo. I possibili genotipi sono quindi omozigoti (NN,
+              ll, cc) o eterozigoti (N l, N c, lc). I genotipi NN, Nl, Nc, lc corrispondono ad un fenotipo N , adatto a
+              vivere in zone temperate e muore piú facilmente muovendosi verso un clima
+              estreme (caldo o freddo). I genotipi ll e cc corrispondono rispettivamente ai fenotipi l e c. Il primo é piú
+              adatto a vivere in climi freddi e ha una probabilitá di morire piú facilmente
+              in climi caldi. Il secondo, al contrario, vive piú facilmente in climi caldi.
+              A ogni tick la creatura ha una certa probabilitá di morire in base alla temperatura del chunk dove si
+              trova e al suo genotipo; La probabilitá di morte per temperatura, sull’asse y, ha
+              come valore massimo 0.01 poiché viene calcolata ad ogni tick. Un valore massimo corrispondente a 1
+              porterebbe ad un numero di morti troppo elevato e non realistico.
+            </li>
+            <li>
+              <strong>Fame (starvation)</strong>: se una creatura non riesce a trovare abbastanza cibo entro un certo numero di cicli, l’energia scende so o un valore minimo e la creatura muore
+            </li>
+          </ul>
+          <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="../img/temp_death_prob_c.png" alt="..." class="img-responsive">
+              <div class="caption">
+                <h4>Probabilità di morte per temperatura delle creature con fenotipo c</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="../img/temp_death_prob_N.png" alt="..." class="img-responsive">
+              <div class="caption">
+                <h4>Probabilità di morte per temperatura delle creature con fenotipo N</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="../img/temp_death_prob_l.png" alt="..." class="img-responsive">
+              <div class="caption">
+                <h4>Probabilità di morte per temperatura delle creature con fenotipo l</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3>Le caratteristiche genetiche</h3>
+        <p>
+          Le creature sono caratterizzate da diversi geni, che sono trasmessi nella riproduzione. I geni possono essere
+          di tre  tipi distinti:
+          </p>
+          <ul>
+            <li>I geni numerici sono caratterizzati da un numero, che ne esprime anche il fenotipo. Nella riproduzione,
+              i geni numerici del figlio vengono calcolati uno per uno a partire dal gene numerico di uno dei due genitori,
+              che viene moltiplicato per un certo numero casuale con andamento gaussiano di media 1. I geni numerici sono:
+              <ul>
+                <li>agility, l’attitudine a muoversi della creatura;
+                </li>
+                <li>bigness, le dimensioni della creatura;</li>
+                <li>fertility, esprime il numero di tick minimi che devono passare tra una riproduzione e l’altra, ma è
+                  inversamente proporzionale all’energia minima necessaria per potersi riprodurre;</li>
+                <li>num_control, un gene numerico utilizzato come gene di controllo (non ha effetti fenotipici).</li>
+              </ul>
+             </li>
+            <li>
+              I geni mendeliani sono caratterizzati da un genotipo formato da una coppia di alleli, e da un fenotipo,
+              calcolato secondo le leggi della genetica a partire dal genotipo. Nella riproduzione i due alleli di ogni
+              gene mendaliano vengono trasmessi selezionandone uno da ciascun genitore. I geni mendaliani sono:
+              <ul>
+                <li>temp_resist, la capacitá della creatura di resistere ad una certa temperatura; gli alleli sono c, l
+                  (recessivi) ed N (dominante);
+                </li>
+                <li>
+                  mndl_control, un gene mendeliano utilizzato come gene di controllo (non ha effe  feno pici); gli alleli
+                  sono a (recessivo) ed A (dominante).
+                </li>
+              </ul> 
+            </li>
+           <li> I geni secondari sono geni numerici non più trasmessi nella riproduzione, ma calcolati a partire da
+             altri geni numerici della creatura. I geni secondari sono:
+             <ul>
+               <li>speed, definita come 2·agility/bigness.
+               </li>
+             </ul>
+            </li>
+        </ul>
+        </div>
+
+      </div>
+
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
+
