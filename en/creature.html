@@ -41,17 +41,17 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown active">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Come funziona<span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">How it works<span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="progetto.html">Il progetto</a></li>
+                    <li><a href="progetto.html">The project</a></li>
                     <li role="separator" class="divider"></li>
-                    <li  class="active"><a href="creature.html">Le creature</a></li>
-                    <li><a href="chunk.html">I chunk</a></li>
+                    <li  class="active"><a href="creature.html">Creatures</a></li>
+                    <li><a href="chunk.html">Chunks</a></li>
                   </ul>
                 </li>
-                <li><a href="risultati.html">Risultati</a></li>
+                <li><a href="risultati.html">Results</a></li>
                 <li><a href="aboutus.html">About us</a></li>
                 <li><a href="contactus.html">Contact us</a></li>
                 <li><a href="faq.html">FAQ</a></li>
@@ -61,14 +61,14 @@
         </nav>
       </div>
         <div>
-          <h1>Le Creature</h1>
-          <h3>Il comportamento</h3>
+          <h1>Creatures</h1>
+          <h3>Behaviour</h3>
           <div class="row">
             <div class="col-md-3">
             </div>
             <div class="col-md-6">
           <a class="thumbnail">
-            <img class="img-responsive" src="../img/comportamento.png" alt="Descrizione immagine" />
+            <img class="img-responsive" src="../img/behaviour.png" alt="Descrizione immagine" />
           </a>
           </div>
             <div class="col-md-3">
@@ -76,39 +76,22 @@
           </div>
           
         <p>
-          Le creature, ad ogni tick, cercano in una zona quadrata di 7 × 7 chunk attorno a loro, dove conviene andare
-          per mangiare (in base alla quantitá di cibo di ogni chunk considerato e alla distanza di esso dal punto in cui
-          si trovano). Una volta raggiunta la destinazione le creature mangiano, aumentando la loro energia vitale e
-          diminuendo la quantitá di cibo presente nel chunk. Ad ogni tick le creature perdono una quantitá di energia
-          proporzionale a quella che possiedono.
+          The creatures, at each tick, calculate which is the best chunk to go to, in a range of 7 x 7 chunks, considering the quantity of food and the distance from their current position. Once they reach the chosen one, the creatures eat, increasing their energy level and decreasing the quantity of food in that chunk. At each tick, creatures also lose a fraction of their vital energy.
           </p>
-          <h3>La riproduzione</h3>
+          <h3>Reproduction</h3>
           <p>
-            La riproduzione avviene in modo casuale tra individui nella zona quadrata 7 × 7 chunk di sesso opposto. In particolare se due individui hanno abbastanza energia, si riproducono generando una nuova creatura che avrá caratteristiche ereditate dai genitori e mediate da mutazioni. Durante la riproduzione, i genitori perdono una certa quantitá di energia che cedono al figlio. 
+            The sexual reproduction between two creatures takes place also in a range of 7 x 7 chunks. In particular, if two of them have enough energy, they reproduce, giving birth to a new creature that inherits a combination of parents’ genetic characteristics with some mutations. During the reproduction, parents lose a part of their energy and give it the new creature. (Figure 3 shows the flowchart of creatures behaviour)
           </p>
-          <h3>Le cause di morte</h3>
-          <p>La morte delle creature puó essere causata da tre fattori:
+          <h3>Death causes</h3>
+          <p>Creatures die for three reasons:
           </p>
           <ul>
-            <li><strong>Vecchiaia (old age)</strong>: la vita massima viene calcolata alla nascita in base a un numero casuale
-              con andamento gaussiano di media 1000 tick e deviazione standard 200 tick;</li>
+            <li><strong>Old age</strong>: age limit is calculated at birth, based on a random number with a gaussian trend (the average is 1000 ticks and the standard deviation is 200 ticks)</li>
             <li>
-              <strong>Temperatura (temperature)</strong>: ogni creatura ha un proprio genotipo riguardante la sua
-              capacitá di resistere alla temperatura (assimilabile alla presenza di pelo). In particolare esistono tre
-              diversi alleli: un allele dominante (N), senza particolari caratteristiche; due alleli recessivi (l
-              e c), rispettivamente adatti a vivere in clima freddo e caldo. I possibili genotipi sono quindi omozigoti (NN,
-              ll, cc) o eterozigoti (N l, N c, lc). I genotipi NN, Nl, Nc, lc corrispondono ad un fenotipo N , adatto a
-              vivere in zone temperate e muore piú facilmente muovendosi verso un clima
-              estreme (caldo o freddo). I genotipi ll e cc corrispondono rispettivamente ai fenotipi l e c. Il primo é piú
-              adatto a vivere in climi freddi e ha una probabilitá di morire piú facilmente
-              in climi caldi. Il secondo, al contrario, vive piú facilmente in climi caldi.
-              A ogni tick la creatura ha una certa probabilitá di morire in base alla temperatura del chunk dove si
-              trova e al suo genotipo; La probabilitá di morte per temperatura, sull’asse y, ha
-              come valore massimo 0.01 poiché viene calcolata ad ogni tick. Un valore massimo corrispondente a 1
-              porterebbe ad un numero di morti troppo elevato e non realistico.
+              <strong>Temperature</strong>: each creature has its own genotype of the resistance to temperature (similar to fur length). In particular there are 3 different alleles: a dominant allele (N), and two recessive alleles (l and c), respectively fitted for lower and higher temperatures. Consequently the possible genotypes are homozygous (NN, ll, cc) or heterozygous (Nl, Nc, lc). NN, Nl, Nc and lc genotypes are fit for mild zones (coloured with white, Figure 2) and usually die in chunk with extreme temperatures; ll and cc genotypes respectively resist to lower temperatures and higher temperatures. At each tick, every creature has a determined probability of death based on its genotype and the temperature in its chunk.
             </li>
             <li>
-              <strong>Fame (starvation)</strong>: se una creatura non riesce a trovare abbastanza cibo entro un certo numero di cicli, l’energia scende so o un valore minimo e la creatura muore
+              <strong>Starvation</strong>: if a creature cannot find enough food for a certain number of ticks, the energy drops under a minimum level and the creature dies.
             </li>
           </ul>
           <div class="row">
@@ -116,7 +99,7 @@
             <div class="thumbnail">
               <img src="../img/temp_death_prob_c.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Probabilità di morte per temperatura delle creature con fenotipo c</h4>
+                <h4>Death probability related to temperature (phenotype c)</h4>
               </div>
             </div>
           </div>
@@ -124,7 +107,7 @@
             <div class="thumbnail">
               <img src="../img/temp_death_prob_N.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Probabilità di morte per temperatura delle creature con fenotipo N</h4>
+                <h4>Death probability related to temperature (phenotype N)</h4>
               </div>
             </div>
           </div>
@@ -132,47 +115,38 @@
             <div class="thumbnail">
               <img src="../img/temp_death_prob_l.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Probabilità di morte per temperatura delle creature con fenotipo l</h4>
+                <h4>Death probability related to temperature (phenotype l)</h4>
               </div>
             </div>
           </div>
         </div>
-        <h3>Le caratteristiche genetiche</h3>
+        <h3>Genetic characteristics</h3>
         <p>
-          Le creature sono caratterizzate da diversi geni, che sono trasmessi nella riproduzione. I geni possono essere
-          di tre  tipi distinti:
+          The creatures are characterized by different genes, transmitted during the reproduction. There are three different types of genes:
           </p>
           <ul>
-            <li>I geni numerici sono caratterizzati da un numero, che ne esprime anche il fenotipo. Nella riproduzione,
-              i geni numerici del figlio vengono calcolati uno per uno a partire dal gene numerico di uno dei due genitori,
-              che viene moltiplicato per un certo numero casuale con andamento gaussiano di media 1. I geni numerici sono:
+            <li>Numerical genes: they are expressed by a number that represent the phenotype. During the reproduction, numerical genes of the new creature are calculated one by one multi- plying the initial value with a random number (with a gaussian trend of average 1). They are:
               <ul>
-                <li>agility, l’attitudine a muoversi della creatura;
+                <li>agility, the moving attitude of a creature;
                 </li>
-                <li>bigness, le dimensioni della creatura;</li>
-                <li>fertility, esprime il numero di tick minimi che devono passare tra una riproduzione e l’altra, ma è
-                  inversamente proporzionale all’energia minima necessaria per potersi riprodurre;</li>
-                <li>num_control, un gene numerico utilizzato come gene di controllo (non ha effetti fenotipici).</li>
+                <li>bigness, the size of a creature;</li>
+                <li>fertility, the number of minimum ticks that should pass between two consecutive reproductions, it is inversely proportional to the minimum energy level needed for a reproduction;</li>
+                <li>num control, a numerical gene used as control-gene (it has no phenotypic effects);</li>
               </ul>
              </li>
             <li>
-              I geni mendeliani sono caratterizzati da un genotipo formato da una coppia di alleli, e da un fenotipo,
-              calcolato secondo le leggi della genetica a partire dal genotipo. Nella riproduzione i due alleli di ogni
-              gene mendaliano vengono trasmessi selezionandone uno da ciascun genitore. I geni mendaliani sono:
+              Mendelian genes are characterized by a genotype made up of a couple of alleles, and a phenotype, calculated acoording to the laws of genetics. In the reproduction the two alleles of each gene are trasmitted choosing them one per parent. They are:
               <ul>
-                <li>temp_resist, la capacitá della creatura di resistere ad una certa temperatura; gli alleli sono c, l
-                  (recessivi) ed N (dominante);
+                <li>temp resist, the ability of a creature to resist to a certain temperature; the alleles are c,l (recessive) and N (dominant);
                 </li>
                 <li>
-                  mndl_control, un gene mendeliano utilizzato come gene di controllo (non ha effe  feno pici); gli alleli
-                  sono a (recessivo) ed A (dominante).
+                  mndl control, a control-gene without phenotypic effects, the alleles are a (recessive) and A (dominant);
                 </li>
               </ul> 
             </li>
-           <li> I geni secondari sono geni numerici non più trasmessi nella riproduzione, ma calcolati a partire da
-             altri geni numerici della creatura. I geni secondari sono:
+           <li> The secondary genes are numerical genes, calculated on other numerical genes of a crea- ture. They are:
              <ul>
-               <li>speed, definita come 2·agility/bigness.
+               <li>speed, defined as 2 · agility/bigness.
                </li>
              </ul>
             </li>

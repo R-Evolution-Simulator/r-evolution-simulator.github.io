@@ -41,17 +41,17 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Come funziona<span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">How it works<span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="progetto.html">Il progetto</a></li>
+                    <li><a href="progetto.html">The project</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="creature.html">Le creature</a></li>
-                    <li><a href="chunk.html">I chunk</a></li>
+                    <li><a href="creature.html">Creatures</a></li>
+                    <li><a href="chunk.html">Chunks</a></li>
                   </ul>
                 </li>
-                <li class="active"><a href="risultati.html">Risultati</a></li>
+                <li class="active"><a href="risultati.html">Results</a></li>
                 <li><a href="aboutus.html">About us</a></li>
                 <li><a href="contactus.html">Contact us</a></li>
                 <li><a href="faq.html">FAQ</a></li>
@@ -61,36 +61,27 @@
         </nav>
       </div>
       <div>
-        <h1>Analisi e Risultati</h1>
-        <h3>Caratteristiche genetiche e selezione naturale</h3>
-        <h5>Caratteristiche genetiche numeriche: agility, bigness, speed, fertility</h5>
-        <p>Si è potuto osservare che col passare dei tick le creature sono sottoposte a selezione naturale, cosí che le
-          loro caratteristiche genetiche si evolvono nel tempo: difatti tutti i geni numerici tendono a convergere
-          ad un determinato valore, e la distribuzione percentile dei valori si riduce.
+        <h1>Analysis and Results </h1>
+        <h3>Genetic characteristics and natural selection</h3>
+        <h5>Numerical characteristics: agility, bigness, speed, fertility</h5>
+        <p>
+          We saw that with time there is a natural selection between the creatures, and consequently their characteristics evolve (Figure 6): all numerical genes converge on a certain value, and the percentile distribution of values decreases.
         </p>
-        <p>Dal punto di vista evolutivo, le creature devono migliorare dal punto di vista della velocitá (quelle piú
-          veloci riescono a mangiare prima il cibo, anche a maggiori distanze) e, contemporaneamente, devono diventare
-          piú grandi, per mangiare una maggiore quantitá di cibo ogni volta. Dato che le creature piú veloci hanno una
-          maggiore capacitá di sopravvivenza, il grafico che rappresenta speed mostra un netto aumento medio con il
-          passare del tempo.
+        <p>
+          From an evolutional point of view, creatures tend to develop their speed (faster creatures can reach more quickly food, even if it is more distant) and become at the same time bigger, to eat more food each time. Because of faster creatures have a greater survival ability, the speed-graph clearly increases.
         </p>
-        <p>Al contrario la caratteristica bigness mostra una diminuzione verso l’inizio della simulazione. Questo é
-          spiegabile mediante il fatto che le creature piú grandi sono, per come é stata definita speed
-          (speed = agility/bigness), piú lente, e quindi svantaggiate nella situazione iniziale. Si osserva, peró, che
-          bigness non scende sotto un certo minimo in quanto le creature piú grandi possono mangiare anche una maggiore
-          quantitá di cibo dal territorio dove si trovano.
+        <p>
+          On the contrary, the bigness-graph shows a relevant decrease at the beginning of the sim- ulation. This is caused by the fact that bigger creatures are slower (as it can be seen in the equation: speed= agility/bigness) and so are disadvantaged. However, bigness values do not drop under a certain level, because bigger creatures can eat more food in the chunks.
         </p>
-        <p>Infine la caratteristica fertility aumenta con il passare del tempo, nonostante fertility rappresenti il
-          minimo numero di tick tra una riproduzione e l’altra. Questo è dovuto al fatto che le creature con maggiori
-          valori di fertility necessitano di meno energia per potersi riprodurre, in quanto quest’ultima è inversamente
-          proporzionale al gene stesso.
+        <p>
+          Fertility generally increase with time, even if it represent the minimum number of ticks that there must be between two consecutive reproductions. This is explained by the fact that creatures with a greater value of fertility need less food to reproduce themselves, because this is inversely proportional to the gene itself.
         </p>
         <div class="row">
           <div class="col-md-4">
             <div class="thumbnail">
               <img src="../img/speed.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Grafico sull'andamento del gene speed con il passare del tempo</h4>
+                <h4>Speed gene variation over time</h4>
               </div>
             </div>
           </div>
@@ -98,7 +89,7 @@
             <div class="thumbnail">
               <img src="../img/bigness.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Grafico sull'andamento del gene bigness con il passare del tempo</h4>
+                <h4>Bigness gene variation over time</h4>
               </div>
             </div>
           </div>
@@ -106,33 +97,27 @@
             <div class="thumbnail">
               <img src="../img/fertility.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Grafico sull'andamento del gene fertility con il passare del tempo</h4>
+                <h4>fertility gene variation over time</h4>
               </div>
             </div>
           </div>
         </div>
-        <h5>Caratteristiche genetiche mendeliane: resistenza alla temperatura</h5>
-        <p>Abbiamo suddiviso il territorio in 8 classi di frequenza climatiche e abbiamo osservato quante creature sono
-          presenti in ogni classe, facendo un grafico per ogni fenotipo relativo alla resistenza alla temperatura (c, l e
-          N). Le fasce sono colorate con 8 colori che variano dal rosso (clima caldo) al blu (clima freddo).
+        <h5>Mendelian characteristics: temperature resistance</h5>
+        <p>
+          We divided the territory into 8 classes of climatic frequency e we studied how many creatures were in each class, drawing the graphs for each temperature phenotype (c, l, N) (Figure 7). Each bracket is coloured with 8 different shades from red (hot climate) to blue (cold climate).
         </p>
-        <p>Si é potuto osservare che le creature con fenotipo c, cioé adatte a sopportare il caldo, si disponevano nei
-          chunk con temperatura maggiore, a differenza di quelle con fenotipo l, che si disponevano nei chunk con
-          temperatura minore. Infine quelli con fenotipo N e n si disponevano nelle zone meno estreme, con una
-          temperatura intermedia. Nelle figure si puó osservare il territorio dal punto di vista climatico e la
-          disposizione delle creature colorate in base al loro fenotipo della temperatura.
+        <p>
+          It has been observed that creatures with c phenotype, that are fitted for hot climate, usually placed in hotter chunk; on the contrary creatures with l phenotype placed in cooler ones. The others (N, n) lived in intermediate zones. Figure 8 shows the climate map of the territory and the disposition of coloured creatures coherently with their phenotype.
         </p>
-        <p>La separazione in base alla temperatura tra creature si puó considerare, nel caso piú estremo, come una
-          speciazione allopatrica, in quanto, sebbene teoricamente in grado di riprodursi, due creature con fenotipo c
-          ed l non potranno incontrarsi, poiché una delle due morirebbe nel caso giungesse nel territorio adatto all’
-          altra.
+        <p>
+          The division of creatures based on temperature can be considered a sort of allopatric speci- ation, because, even if in theory able to reproduce themselves, a creature with c phenotype and a creature with l phenotype cannot meet each other, because living in temperature-conflicting zones.
         </p>
         <div class="row">
           <div class="col-md-4">
             <div class="thumbnail">
               <img src="../img/gene_c.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Distribuzione sul territorio delle creature con fenotipo c</h4>
+                <h4>Distribution of creatures considering c phenotype</h4>
               </div>
             </div>
           </div>
@@ -140,7 +125,7 @@
             <div class="thumbnail">
               <img src="../img/gene_N.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Distribuzione sul territorio delle creature con fenotipo N</h4>
+                <h4>Distribution of creatures considering N phenotype</h4>
               </div>
             </div>
           </div>
@@ -148,7 +133,7 @@
             <div class="thumbnail">
               <img src="../img/gene_l.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Distribuzione sul territorio delle creature con fenotipo l</h4>
+                <h4>Distribution of creatures considering l phenotype</h4>
               </div>
             </div>
           </div>
@@ -159,7 +144,7 @@
             <div class="thumbnail">
               <img src="../img/t_spread_1.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Immagine di un istante della simulazione dal punto di vista della temperatura (1)</h4>
+                <h4>Image of an istant of the simulation considering temperature (1)</h4>
               </div>
             </div>
           </div>
@@ -167,18 +152,18 @@
             <div class="thumbnail">
               <img src="../img/t_spread_2.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Immagine di un istante della simulazione dal punto di vista della temperatura (2)</h4>
+                <h4>Image of an istant of the simulation considering temperature (2)</h4>
               </div>
             </div>
           </div>
           <div class="col-md-2"></div>
         </div>
-        <h5>Caratteristiche genetiche di controllo: equilibrio di Hardy-Weinberg e Genetic Drift</h5>
-        <p>Discorso diverso vale per i due geni che non hanno effetti fenotipici e hanno quindi la funzione di controllo.
+        <h5>Control-genes: Hardy-Weinberg principle and Genetic Drift</h5>
+        <p>
+          A different discussion mast be done with the two genes that have a control function with no phonotypical effects.
         </p>
-        <p>Il gene numerico num_control, come atteso, non ha un comportamento univoco (sempre crescente, decrescente o
-          costante), ma varia da simulazione a simulazione. Inoltre non si può osservare la stessa riduzione
-          della variazione della distribuzione percentile come per i geni numerici.
+        <p>
+          The numerical gene numcontrol has not a univocal behaviour (always increasing, decreasing or constant), but varies in each simulation [Figure 9].
         </p>
         <div class="row">
           <div class="col-md-2"></div>
@@ -186,7 +171,7 @@
             <div class="thumbnail">
               <img src="../img/num_control_1.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Andamento del gene num_control con il passare del tempo (1)</h4>
+                <h4>num_control gene variation over time (1)</h4>
               </div>
             </div>
           </div>
@@ -194,21 +179,14 @@
             <div class="thumbnail">
               <img src="../img/num_control_2.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Andamento del gene num_control con il passare del tempo (2)</h4>
+                <h4>num_control gene variation over time (2)</h4>
               </div>
             </div>
           </div>
           <div class="col-md-2"></div>
         </div>
-        <p>Per il gene di controllo mendeliano mndl_control, invece, si nota che la distribuzione di esso sul territorio
-          è omogenea al variare della temperatura, sia per il fenotipo A dominante, sia per quello a recessivo, come si
-          puó osservare dalla figura. Inoltre abbiamo controllato se esso rispettasse l’equilibrio di Hardy-Weinberg.
-          Le condizioni per questo equilibrio sono: assenza di mutazioni, accoppiamenti casuali, popolazione di grandi
-          dimensioni, assenza di flusso genico e mancanza di selezione naturale in base a quel gene. Abbiamo osservato
-          che il carattere considerato non rispecchia questo equilibrio, in quanto la popolazione è di dimensioni
-          abbastanza ridotte (circa 150 creature nel mondo in un certo istante) ed è soggetta ad un andamento incostante
-          dovuto al casuale consumo eccessivo di cibo in alcune aree nell’arco di alcuni tick. Possiamo quindi
-          affermare che questo carattere é soggetto a deriva genetica.
+        <p>
+          Moreover there is no reduction of the percentile distribution as in other numerical genes. Considering the Mendelian gene mndlcontrol, it can be observed that its distribution in the territory is homogeneous on temperature varying, for both the two phenotypes, A dominant and a recessive, as in Figure 10. We also controlled if it respected the Hardy-Weinberg principle. The condition for this equilibrium are: no mutations, casual reproduction, a big population, no gene flow and absence of natural selection with that gene. We saw that this character does not respect this equilibrium, because of the small population (only 150 creatures in the world) and the unstable trend due to the random food consumption in some of the areas at certain ticks. We can say that this character is subjected to a genetic drift.
         </p>
         <div class="row">
           <div class="col-md-2"></div>
@@ -216,7 +194,7 @@
             <div class="thumbnail">
               <img src="../img/mndl_control_A.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Distribuzione sul territorio del gene mendeliano di controllo (fenotipo dominante)</h4>
+                <h4>Distribution on the world considering the mendelian gene of control (dominant phenotype)</h4>
               </div>
             </div>
           </div>
@@ -224,28 +202,25 @@
             <div class="thumbnail">
               <img src="../img/mndl_control_b.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Distribuzione sul territorio del gene mendeliano di controllo (fenotipo recessivo)</h4>
+                <h4>Distribution on the world considering the mendelian gene of control (recessive phenotype)</h4>
               </div>
             </div>
           </div>
           <div class="col-md-2"></div>
         </div>
-        <h3>Distribuzione delle creature sul territorio secondo il cibo</h3>
-        <p>Come fatto per la temperatura, abbiamo diviso il territorio in 8 classi in base alla quantitá di cibo massimo
-          in ogni chunk. Abbiamo quindi rappresentato il numero di creature nelle varie classi con il passare dei tick.
-          Le fasce sono rappresentate con una tonalitá di verde diversa: quelle piú scure hanno meno cibo, mentre quelle
-          piú chiare ne hanno di piú.
+        <h3>Territory distribution of creatures considering the food</h3>
+        <p>
+          As we did for temperature, we divided the territory into 8 classes of foodmax quantity in each chunk. We represent the graph with the number of creatures for each class over time. We coloured the brackets with 8 different shades: darker ones has less food, lighter ones has more.
         </p>
-        <p>Dal grafico in Figura si puó osservare come le creature si trovino principalmente nelle fasce piú chiare,
-          ovvero con una maggiore quantitá di cibo. Dalla Figura si puó invece osservare la distribuzione delle
-          creature sul territorio in un certo istante.
+        <p>
+          The graph in Figure 11 shows that creatures are generally in lighter brackets. Figure 12 shows the distribution of creatures on the territory in a certain tick.
         </p>
         <div class="row">
           <div class="col-md-4">
             <div class="thumbnail">
               <img src="../img/f_spread.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Distribuzione sul territorio delle creature in base alla quantità di cibo</h4>
+                <h4>Distribution of the creatures in the world considering the quantity of food</h4>
               </div>
             </div>
           </div>
@@ -253,7 +228,7 @@
             <div class="thumbnail">
               <img src="../img/f_spread_1.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Immagine di un istante della simulazione dal punto di vista del cibo (1)</h4>
+                <h4>Image of an istant of the simulation considering food (1)</h4>
               </div>
             </div>
           </div>
@@ -261,22 +236,15 @@
             <div class="thumbnail">
               <img src="../img/f_spread_2.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Immagine di un istante della simulazione dal punto di vista del cibo (2)</h4>
+                <h4>Image of an istant of the simulation considering food (2)</h4>
               </div>
             </div>
           </div>
         </div>
-        <h3>Andamento demografico</h3>
-        <h5>Ciclo di nascite e morti</h5>
-        <p>La popolazione delle creature segue un andamento sinusoidale con un incrementi della popolazione di circa 100
-          individui. (Figura 13)
-        </p>
-        <p>Questo comportamento é dovuto a un meccanismo di autoregolazione e si verifica quando, essendoci un numero
-          troppo basso di creature rispetto a quello che l’ecosistema puó sopportare, queste si riproducono
-          incrementando velocemente il loro numero. A questo punto, peró, sono troppe e, non essendoci abbastanza cibo,
-          avviene un forte calo demografico, quindi il ciclo ricomincia. Si osserva quindi che a un picco di nascite
-          segue sempre un picco di morti a cui segue un calo delle nascite e un successivo calo delle morti, per
-          riprendere infine da capo il ciclo.
+        <h3>Demographic trend</h3>
+        <h5>Birth and death cycle</h5>
+        <p>
+          The population graph follows a sinusoidal trend with a creatures increase of about 100 organ- isms. (Figure 13). There is a mechanism of auto-regulation that effects when there are less creatures than that world can sustain, causing many reproductions between creatures and an increase of population number. But, at this point, there are much more creatures than food availability, and we can observe a demographic fall. Then the cycle restarts.
         </p>
         <div class="row">
           <div class="col-md-2"></div>
@@ -284,7 +252,7 @@
             <div class="thumbnail">
               <img src="../img/num_creature.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Andamento demografico</h4>
+                <h4>Demographic trend</h4>
               </div>
             </div>
           </div>
@@ -292,7 +260,7 @@
             <div class="thumbnail">
               <img src="../img/birth_death.png" alt="..." class="img-responsive">
               <div class="caption">
-                <h4>Andamento nascite/morti</h4>
+                <h4>Birth and death cycle</h4>
               </div>
             </div>
           </div>

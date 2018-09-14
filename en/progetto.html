@@ -40,17 +40,17 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown active">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Come funziona<span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">How it works<span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li class="active"><a href="#">Il progetto</a></li>
+                    <li class="active"><a href="#">The project</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="creature.html">Le creature</a></li>
-                    <li><a href="chunk.html">I chunk</a></li>
+                    <li><a href="creature.html">Creatures</a></li>
+                    <li><a href="chunk.html">Chunks</a></li>
                   </ul>
                 </li>
-                <li><a href="risultati.html">Risultati</a></li>
+                <li><a href="risultati.html">Results</a></li>
                 <li><a href="aboutus.html">About us</a></li>
                 <li><a href="contactus.html">Contact us</a></li>
                 <li><a href="faq.html">FAQ</a></li>
@@ -68,38 +68,31 @@
           </div>
           <div class="row">
             <div class="col-md-5">
-              <h3>Che cos'è?</h3>
+              <h3>What is it?</h3>
+
               <p>
-                In tutti i campi della ricerca é in crescita esponenziale l’utilizzo di processori, mezzi di calcolo
-                potenti che permettono di simulare ambienti naturali, in cui é possibile osservare piú facilmente
-                fenomeni particolari al variare di parametri. Mediante i computer é possibile simulare voli spaziali,
-                moti astronomici, ecosistemi, anche sotto forma di videogioco.
+                In every field of research, the usage of computers is growing very fast, since they permit to simulate
+                natural environments, in which it possible to analyse and observe particular events, in an easy way.
+                Using software, spatial flights, astronomical motions and ecosystems can be simulated as videogames.
+                Our project consists of a Python program simulating the processes of evolution of a specie in a virtual world. Each creature behaves as in the real world: they look for the most comfortable habitat, they feed and reproduce themselves. On the contrary if they are in an uncomfortable zone, they will probably die.
               </p>
               <p>
-                Il nostro progetto ha previsto la creazione di un programma (scritto in linguaggio Python) che simula
-                all’interno di un ambiente virtuale i processi di evoluzione di una specie. Ogni creatura si comporta
-                come nel mondo reale, ricercando l’ambiente piú favorevole per vivere, nutrendosi, riproducendosi e
-                morendo se si trova in un ambiente troppo sfavorevole. Analizzando i dati si osserverá quindi come essi
-                rispecchiano ció che accade realmente in natura, come avviene la selezione naturale e come in un certo
-                ambiente sopravvivono gli animali piú adatti a vivere lí.
+                Looking at data, we can observe the mechanisms of population genetics, the large-scale transmission of genetic traits and the natural selection of creatures of a specie. The different traits (both numerical and Mendelian ones) and their behaviour will be analysed comparing them with the Hardy-Weinberg principle and the genetic drift.
               </p>
               <p>
-                Attraverso questo progetto sará possibile osservare i meccanismi studiati dalla genetica delle
-                popolazioni, la trasmissione dei caratteri genetici su larga scala e la selezione naturale degli
-                individui della specie. Verranno analizzati vari caratteri (alcuni numerici e alcuni di tipo mendeliano)
-                e il loro comportamento a confronto con l’equilibrio di Hardy-Weinberg e con la deriva genetica.
-                Le creature da noi considerate possono ben rappresentare una qualunque specie di erbivori, i quali, pur
-                avendo un comportamente piuttosto semplice, daranno la possibilitá di analizzare l’andamento sinusoidale
-                della popolazione e la distribuzione differenziata sul territorio. L’interfaccia grafica, realizzata in
-                Python, permette di visualizzare il tutto in modo diretto ed efficace.</p></div>
+                Our creatures represent very well any specie of herbivores, whose simple behaviour, shows the sinusoidal trend of the population and the diversified distribution in the territory. The graphic interface, made with Python, permits to display everything in a very simple and efficient way.
+              </p></div>
             <div class="col-md-7">
-            <h3>L'interfaccia grafica</h3>
-              <p>Nell’interfaccia grafica, i chunk sono rappresenta  come quadratini, mentre le creature come cerchi. La dimensione dei cerchi puó rappresentare aspetti diversi della creatura, impostabili nel programma. Le creature di dimensioni maggiori hanno un’energia maggiore in quell’istante perché hanno trovato una maggiore quantitá di cibo nei tick precedenti. Anche il colore delle creature puó rappresentare aspetti diversi</p>
+            <h3>The user interface</h3>
+              <p>In the graphical user interface, chunks are represented as small squares (Figure 2) and creatures as small circles. The dimension of circles may represent different features of the creatures. In Figure 5, the bigger the circles, the more energy the corresponding creatures have at that moment, because they have just eaten some food.</p>
+
+              <p>Also the colour of the creatures shows different features of them:</p>
+
               <ul>
-                <li>l’abbinamento azzurro/giallo rappresenta la distinzione dei due sessi;
+                <li>cyan/yellow represent the two possible sexes;
                 </li>
                 <li>
-                  l’abbinamento rosso/grigio-bianco/blu rappresenta il fenotipo delle creature in relazione alla loro capacitá di resistere alla temperatura. In particolare, il rosso un fenotipo c (preferenza per il caldo), il blu un fenotipo l (preferenza per il freddo), il grigio un fenotipo N eterozigota e bianco un fenotipo N omozigota (preferenza per climi temperati).
+                  red/grey-white/blue represent the different phenotypes of temp-resist. In particular, red creatures correspond to c phenotype (fitted for hotter zones), blue creatures correspond to l phenotype (cooler zones), white and grey creatures correspond respectively to ho- mozygous N phenotype and heterozygous N phenotype (fitted for mild portions);
                 </li>
               </ul>
               <div class="row">

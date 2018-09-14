@@ -41,17 +41,17 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown active">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Come funziona<span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">How it works<span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="progetto.html">Il progetto</a></li>
+                    <li><a href="progetto.html">The project</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="creature.html">Le creature</a></li>
-                    <li class="active"><a href="chunk.html">I chunk</a></li>
+                    <li><a href="creature.html">Creatures</a></li>
+                    <li class="active"><a href="chunk.html">Chunks</a></li>
                   </ul>
                 </li>
-                <li><a href="risultati.html">Risultati</a></li>
+                <li><a href="risultati.html">Results</a></li>
                 <li><a href="aboutus.html">About us</a></li>
                 <li><a href="contactus.html">Contact us</a></li>
                 <li><a href="faq.html">FAQ</a></li>
@@ -61,13 +61,14 @@
         </nav>
       </div>
       <div>
-        <h1>I Chunk</h1>
+        <h1>Chunks</h1>
         <div class="row">
           <div class="col-md-1"></div>
           <div class="col-md-5">
-            <p>Il territorio virtuale nel quale le creature vivono ha forma rettangolare ed é suddiviso in piccole porzioni quadrate denominate chunk, mentre il tempo é misurato in unitá chiamate tick. Ad ogni tick vengono aggiornate le caratteristiche di tutte le creature vive e di tutti i chunk.</p>
-            <p>Ogni chunk è caratterizzato da: una posizione nel mondo; una quantitá massima di erba (tra 0 e 100); un coefficiente di crescita dell’erba, direttamente proporzionale alla quantitá massima di erba nel chunk; una temperatura, che varia tra −100(freddo) e 100 (caldo), costante nel tempo. Sia la temperatura che la quantitá iniziale dell’erba sono distribuite nel mondo tramite il Rumore Semplice di Perlin, una funzione che assegna valori vicini a variabili vicini (un ”randomizzazione” piú omogenea)
-            </p>
+            <p>
+              Each chunk is characterized by: a position in the world; a total-quantity of producible food (between 0 and 100); a food-growth coefficient; a temperature, between -100 (cold) and + 100 (hot), that doesn’t change over time.</p>
+            <p>
+              When the program starts, each chunk is assigned an initial quantity of food and a temper- ature using the Perlin Noise function, which generates similar values for nearby chunks and unrelated values for chunks which are far away (the result is a more credible randomization, as can be seen in the Figure 1 in the Appendix).            </p>
           </div>
           <div class="col-md-6">
             <div class="row">
@@ -75,7 +76,7 @@
                 <div class="thumbnail">
                   <img src="../img/perlin1.png" alt="..." class="img-responsive">
                   <div class="caption">
-                    <h4>Rumore semplice di Perlin in una variabile</h4>
+                    <h4>Perlin Noise with one variable</h4>
                   </div>
                 </div>
               </div>
@@ -83,7 +84,7 @@
                 <div class="thumbnail">
                   <img src="../img/perlin2.png" alt="..." class="img-responsive">
                   <div class="caption">
-                    <h4>Rumore semplice di Perlin in due variabili</h4>
+                    <h4>Perlin Noise with two variables</h4>
                   </div>
                 </div>
               </div>
@@ -98,7 +99,7 @@
                 <div class="thumbnail">
                   <img src="../img/backg_foodmax.png" alt="..." class="img-responsive">
                   <div class="caption">
-                    <h4>Territorio dal punto di vista del cibo presente</h4>
+                    <h4>World considering the quantity of food present</h4>
                   </div>
                 </div>
               </div>
@@ -106,7 +107,7 @@
                 <div class="thumbnail">
                   <img src="../img/backg_temperature.png" alt="..." class="img-responsive">
                   <div class="caption">
-                    <h4>Territorio dal punto di vista della temperatura</h4>
+                    <h4>World considering the temperature</h4>
                   </div>
                 </div>
               </div>
@@ -114,7 +115,11 @@
           </div>
           <div class="col-md-5">
             <p>
-              Si possono osservare a lato due immagini rappresentanti il mondo in assenza delle creature, nella prima dal punto di vista termico (le zone sono piú calde tendono al colore rosso, mentre quelle piú fredde tendono al colore blu), mentre nella seconda dal punto di vista della distribuzione della quantitá massima di cibo (le zone verde scure hanno poco cibo, mentre le zone verde chiaro hanno tanto cibo). Come si puó osservare, la temperatura varia gradualmente tra un chunk e un altro vicino, grazie appunto al Rumore Semplice di Perlin. Lo stesso discorso vale per la distribuzione della quantità cibo. Tuttavia, ad un certo istante, la distribuzione del cibo presente in un chunk puó variare, in base a dove le creature hanno mangiato. Nel caso di un’eventuale morte di tutte le creature, il cibo ricrescerebbe tornando alla situazione in figura.</p>
+              Figure 2 shows two images representing the world without creatures: the first one from a climatic point of view (red zones are hotter, blue zones are cooler); the second one from the point of view of the land fertility (in dark green chunks there is more food, in the lighter ones there is less food).
+              We can observe that the temperature changes gradually from chunk to chunk, as well as the quantity of food, thanks to the Perlin Noise function quasi continuity.
+              However, when creatures reach a given chunk, its quantity of food starts reducing, as a consequence of their feeding.
+              If all the creatures die, the food starts growing again, going back to the situation in Figure 2.
+            </p>
           </div>
         </div>
       </div>
